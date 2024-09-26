@@ -1,12 +1,10 @@
 import base64
-import os
 import io
 import random
 import cv2
 from PIL import Image
 import requests
 import numpy as np
-import torch
 from lama_cleaner.model_manager import ModelManager
 from lama_cleaner.schema import Config
 from lama_cleaner.helper import (
