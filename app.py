@@ -115,8 +115,6 @@ class InferlessPythonModel:
             print("CUDA out of memory")
         else:
             print(f"{str(e)}")
-    finally:
-        torch_gc()
     
     res_np_img = cv2.cvtColor(res_np_img.astype(np.uint8), cv2.COLOR_BGR2RGB)
     if alpha_channel is not None:
