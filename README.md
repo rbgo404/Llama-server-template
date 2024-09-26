@@ -1,5 +1,5 @@
 # Llama-server-template
-This is a model deployment template for Object removal from Images.
+This is a model deployment template for object removal from Images.
 
 ---
 ## Prerequisites
