@@ -104,15 +104,7 @@ class InferlessPythonModel:
     image = resize_max_size(image, size_limit=size_limit, interpolation=interpolation)
     mask = resize_max_size(mask, size_limit=size_limit, interpolation=interpolation)
     
-    try:
-        res_np_img = self.model(image, mask, config)
-    except RuntimeError as e:
-        if "CUDA out of memory. " in str(e):
-            # NOTE: the string may change?
-            print("CUDA out of memory")
-        else:
-            print(f"{str(e)}")
-    
+    res_np_img = self.model(image, mask, config)    
     res_np_img = cv2.cvtColor(res_np_img.astype(np.uint8), cv2.COLOR_BGR2RGB)
     if alpha_channel is not None:
         if alpha_channel.shape[:2] != res_np_img.shape[:2]:
