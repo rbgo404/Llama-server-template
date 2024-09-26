@@ -5,7 +5,6 @@ import random
 import cv2
 from PIL import Image
 import requests
-import multiprocessing
 import numpy as np
 import torch
 from lama_cleaner.model_manager import ModelManager
